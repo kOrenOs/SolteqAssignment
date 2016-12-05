@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 4.12.2016 18:50:30 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="databaseEntity.Staffperson" table="staffperson" catalog="staffsalary" optimistic-lock="version">
+        <id name="personalId" type="java.lang.Integer">
+            <column name="PersonalID" />
+            <generator class="identity" />
+        </id>
+        <property name="fisrtName" type="string">
+            <column name="FisrtName" length="50" not-null="true" />
+        </property>
+        <property name="surname" type="string">
+            <column name="Surname" length="50" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="50" not-null="true" />
+        </property>
+        <property name="postalCode" type="string">
+            <column name="PostalCode" length="10" not-null="true" />
+        </property>
+        <property name="street" type="string">
+            <column name="Street" length="50" not-null="true" />
+        </property>
+        <property name="houseNumber" type="int">
+            <column name="HouseNumber" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="Phone" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMail" length="50" />
+        </property>
+        <set name="salaries" table="salary" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PersonalID" not-null="true" />
+            </key>
+            <one-to-many class="databaseEntity.Salary" />
+        </set>
+    </class>
+</hibernate-mapping>

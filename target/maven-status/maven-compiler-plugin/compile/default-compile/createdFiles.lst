@@ -1,0 +1,15 @@
+databaseEntity\SalaryId.class
+databaseEntity\StaffPersonDBOperations.class
+guiComponents\FormularData$FormularTypes.class
+databaseEntity\HibernateUtil.class
+databaseEntity\Salary.class
+constants\GuiConstantsAndTexts.class
+databaseEntity\Staffperson.class
+guiComponents\MenuComposer.class
+guiComponents\StaticGuiComponents.class
+controllers\ControllerService.class
+guiComponents\FormularTaskData.class
+guiComponents\TableComposer.class
+guiComponents\MenuOptionData.class
+guiComponents\GuiServices.class
+guiComponents\FormularData.class

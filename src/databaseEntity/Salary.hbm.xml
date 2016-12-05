@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 4.12.2016 18:50:30 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="databaseEntity.Salary" table="salary" catalog="staffsalary" optimistic-lock="version">
+        <composite-id name="id" class="databaseEntity.SalaryId">
+            <key-property name="personalId" type="int">
+                <column name="PersonalID" />
+            </key-property>
+            <key-property name="month" type="short">
+                <column name="Month" />
+            </key-property>
+            <key-property name="year" type="short">
+                <column name="Year" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="staffperson" class="databaseEntity.Staffperson" update="false" insert="false" fetch="select">
+            <column name="PersonalID" not-null="true" />
+        </many-to-one>
+        <property name="salarySum" type="big_decimal">
+            <column name="SalarySum" precision="10" not-null="true" />
+        </property>
+        <property name="extraSalary" type="big_decimal">
+            <column name="ExtraSalary" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

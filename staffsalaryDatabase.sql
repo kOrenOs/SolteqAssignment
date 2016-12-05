@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2016 at 10:06 PM
+-- Generation Time: Dec 05, 2016 at 12:51 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -29,13 +29,11 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `salary` (
   `PersonalID` int(20) NOT NULL AUTO_INCREMENT,
   `Month` smallint(2) unsigned NOT NULL,
-  `Year` year(4) NOT NULL,
+  `Year` smallint(4) unsigned NOT NULL,
   `SalarySum` decimal(10,2) unsigned NOT NULL,
   `ExtraSalary` decimal(10,2) unsigned DEFAULT NULL,
   PRIMARY KEY (`PersonalID`,`Month`,`Year`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Table structure for table `staffperson`
@@ -52,15 +50,7 @@ CREATE TABLE IF NOT EXISTS `staffperson` (
   `Phone` varchar(15) DEFAULT NULL,
   `EMail` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`PersonalID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
-
---
--- Dumping data for table `staffperson`
---
-
---
--- Constraints for dumped tables
---
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
 
 --
 -- Constraints for table `salary`
