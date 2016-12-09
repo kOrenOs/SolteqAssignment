@@ -39,13 +39,13 @@
 	$(document).ready(
 			function() {
 				clicked($('#<%out.write(taskDataEditStaffPerson.getName());%>'), '<%out.write(taskDataEditStaffPerson.getAction());%>',
-						$('#outputTablePlatform'));
+						$('#editOutputField'));
 				clicked($('#<%out.write(taskDataEditSalary.getName());%>'), '<%out.write(taskDataEditSalary.getAction());%>',
-						$('#outputTablePlatform'));
+						$('#editOutputField'));
 				clicked($('#<%out.write(taskDataDeleteStaffPerson.getName());%>'), '<%out.write(taskDataDeleteStaffPerson.getAction());%>',
-						$('#outputTablePlatform'));
+						$('#deleteOutputField'));
 				clicked($('#<%out.write(taskDataDeleteSalary.getName());%>'), '<%out.write(taskDataDeleteSalary.getAction());%>',
-						$('#outputTablePlatform'));
+						$('#deleteOutputField'));
 			});
 </script>
 
@@ -119,6 +119,10 @@
 			</td>
 		</tr>
 	</table>
+	<br>
+	<div id="editOutputField"></div>
+	<br>
+	<br>
 	<h2>Delete staff member of salary</h2>
 	<table>
 		<tr>
@@ -184,7 +188,6 @@
 		</tr>
 	</table>
 
-	<div id="outputTablePlatform"></div>
-	<div id="outputTablePlatform"></div>
+<div id="deleteOutputField"></div>
 </body>
 </html>
