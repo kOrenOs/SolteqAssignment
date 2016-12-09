@@ -19,6 +19,12 @@
         <url-pattern>/addEntityPage.html</url-pattern>
         <url-pattern>/searchPage.jsp</url-pattern>
         <url-pattern>/searchPage.html</url-pattern>
+        <url-pattern>/exportData.jsp</url-pattern>
+        <url-pattern>/exportData.html</url-pattern>
+        <url-pattern>/editDelete.jsp</url-pattern>
+        <url-pattern>/editDelete.html</url-pattern>
+        <url-pattern>/calculationFunctions.jsp</url-pattern>
+        <url-pattern>/calculationFunctions.html</url-pattern>
     </servlet-mapping>
   
 </web-app>
